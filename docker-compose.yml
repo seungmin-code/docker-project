@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: postgresql
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "5001:5432"
+    volumes:
+      - ./docker-database/data:/var/lib/postgresql/data
+      - ./docker-database/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./docker-database/config/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./docker-database/config/pg_hba.conf:/etc/postgresql/pg_hba.conf
+    command: ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
+    networks:
+      - docker-network
+
+networks:
+  docker-network:
+    external: true
+
+volumes:
+  pg_data:

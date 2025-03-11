@@ -1,0 +1,5 @@
+# PostgreSQL Data Dir
+docker-database/data/
+
+# PostgreSQL Account
+.env
