@@ -18,6 +18,15 @@ services:
     networks:
       - docker-network
 
+  frontend:
+    build: ./docker-frontend
+    container_name: frontend
+    restart: always
+    ports:
+      - "80:80"
+    networks:
+      - docker-network   
+
 networks:
   docker-network:
     external: true
