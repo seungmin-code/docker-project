@@ -1,0 +1,29 @@
+services:
+  backend:
+    container_name: backend
+    build:
+      context: ./docker-backend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./docker-backend:/app
+      - ~/.m2:/root/.m2
+    working_dir: /app
+    command: ./mvnw spring-boot:run
+    restart: always
+
+  frontend:
+    container_name: frontend
+    build:
+      context: ./docker-frontend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker-frontend:/app
+      - /app/node_modules
+    working_dir: /app
+    command: npm run dev -- --host 0.0.0.0 --port 80
+    environment:
+      - VITE_API_URL=http://backend:8080
+    restart: always

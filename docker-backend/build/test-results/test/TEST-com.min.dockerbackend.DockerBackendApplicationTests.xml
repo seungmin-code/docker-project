@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.min.dockerbackend.DockerBackendApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-02T06:25:53.853Z" hostname="DESKTOP-P187GRB" time="1.213">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.min.dockerbackend.DockerBackendApplicationTests" time="1.213"/>
+  <system-out><![CDATA[15:25:50.239 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.min.dockerbackend.DockerBackendApplicationTests]: DockerBackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:25:50.416 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.min.dockerbackend.DockerBackendApplication for test class com.min.dockerbackend.DockerBackendApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.4)
+
+2025-04-02T15:25:51.022+09:00  INFO 35212 --- [docker-backend] [    Test worker] c.m.d.DockerBackendApplicationTests      : Starting DockerBackendApplicationTests using Java 17.0.0.1 with PID 35212 (started by YangSeungMin in C:\Users\YangSeungMin\Desktop\docker-project\docker-backend)
+2025-04-02T15:25:51.025+09:00  INFO 35212 --- [docker-backend] [    Test worker] c.m.d.DockerBackendApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-04-02T15:25:52.193+09:00  WARN 35212 --- [docker-backend] [    Test worker] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.min.dockerbackend]' package. Please check your configuration.
+2025-04-02T15:25:53.801+09:00  INFO 35212 --- [docker-backend] [    Test worker] c.m.d.DockerBackendApplicationTests      : Started DockerBackendApplicationTests in 3.144 seconds (process running for 5.257)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
